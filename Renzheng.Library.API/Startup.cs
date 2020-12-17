@@ -29,6 +29,7 @@ namespace Renzheng.Library.API
             services.AddControllers();
             services.AddScoped<IAuthorRepository, AuthorMockRepository>();
             services.AddScoped<IBookRepository, BookMockRepository>();
+            services.AddControllersWithViews().AddNewtonsoftJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

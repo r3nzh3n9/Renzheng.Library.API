@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "985a6c25-0ead-4b39-a24f-4db58e75e1c3",
+		"name": "Renzheng.Library.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AuthorController",
+			"item": [
+				{
+					"name": "Get All Author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/authors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/authors/e5e219fe-d927-45aa-8b97-c4590daffe49",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"e5e219fe-d927-45aa-8b97-c4590daffe49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Renzheng Zhang\",\r\n    \"age\": 23,\r\n    \"email\": \"renzheng.zh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/authors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/authors/862ddc63-9bfe-4231-8faf-df16a0e05964",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"862ddc63-9bfe-4231-8faf-df16a0e05964"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "BookController",
+			"item": [
+				{
+					"name": "Get all the books of an author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/authors/e5e219fe-d927-45aa-8b97-c4590daffe49/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"e5e219fe-d927-45aa-8b97-c4590daffe49",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an book of an author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/authors/e5e219fe-d927-45aa-8b97-c4590daffe49/books/175569d6-60d9-4636-a5dd-3a8d66df5d4f",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"e5e219fe-d927-45aa-8b97-c4590daffe49",
+								"books",
+								"175569d6-60d9-4636-a5dd-3a8d66df5d4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add book for an author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Renzheng's Book\",\r\n    \"description\": \"A book of Renzheng ...\",\r\n    \"pages\": 328\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/authors/862ddc63-9bfe-4231-8faf-df16a0e05964/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"862ddc63-9bfe-4231-8faf-df16a0e05964",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book of an author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/authors/e5e219fe-d927-45aa-8b97-c4590daffe49/books/175569d6-60d9-4636-a5dd-3a8d66df5d4f",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"e5e219fe-d927-45aa-8b97-c4590daffe49",
+								"books",
+								"175569d6-60d9-4636-a5dd-3a8d66df5d4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"op\": \"replace\",\r\n    \"path\": \"/title\",\r\n    \"value\": \"Book1 - particially updated\"\r\n},\r\n{\r\n    \"op\": \"remove\",\r\n    \"path\": \"/description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/authors/e5e219fe-d927-45aa-8b97-c4590daffe49/books/175569d6-60d9-4636-a5dd-3a8d66df5d4f",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"authors",
+								"e5e219fe-d927-45aa-8b97-c4590daffe49",
+								"books",
+								"175569d6-60d9-4636-a5dd-3a8d66df5d4f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

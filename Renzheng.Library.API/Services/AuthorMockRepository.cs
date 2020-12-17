@@ -21,7 +21,19 @@ namespace Renzheng.Library.API.Services
 
         public bool IsAuthorExists(Guid authorId)
         {
-            return LibraryMockData.Current.Authors.Any(author => author.Id == author.Id);
+            return LibraryMockData.Current.Authors.Any(author => author.Id == authorId);
+        }
+
+        public void AddAuthor(AuthorDto author)
+        {
+            author.Id = Guid.NewGuid();
+            LibraryMockData.Current.Authors.Add(author);
+        }
+
+        public void DeleteAuthor(AuthorDto author)
+        {
+            LibraryMockData.Current.Authors.Remove(author);
+            LibraryMockData.Current.Books.RemoveAll(book => book.AuthorId == author.Id);
         }
     }
 }

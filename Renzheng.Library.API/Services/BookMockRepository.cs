@@ -18,5 +18,24 @@ namespace Renzheng.Library.API.Services
         {
             return LibraryMockData.Current.Books.FirstOrDefault(book => book.AuthorId == authorId && book.Id == bookId);
         }
+
+        public void AddBook(BookDto bookDto)
+        {
+            LibraryMockData.Current.Books.Add(bookDto);
+        }
+
+        public void DeleteBook(BookDto bookDto)
+        {
+            LibraryMockData.Current.Books.Remove(bookDto);
+        }
+
+        public void UpdateBook(Guid authorId, Guid bookId, BookForUpdateDto book)
+        {
+            var originalBook = GetBookForAuthor(authorId, bookId);
+
+            originalBook.Title = book.Title;
+            originalBook.Description = book.Description;
+            originalBook.Pages = book.Pages;
+        }
     }
 }
